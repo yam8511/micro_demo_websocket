@@ -1,0 +1,23 @@
+[app]
+env = "local"
+ip = "websocket-game"
+host = "websocket-game"
+port = ":6001"
+site = "ws-user"
+
+[pusher]
+name = "玩家中心"
+ip = "sidecar"
+host = "sidecar"
+port = ":8501"
+api_key = ""
+max_link = 0
+chat_room = "user"
+
+    [pusher.rpc.register]
+    service = "pusher"
+    method = "Pusher.Register"
+
+    [pusher.rpc.deregister]
+    service = "pusher"
+    method = "Pusher.Deregister"
